@@ -8,9 +8,9 @@
 
 import UIKit
 
-//protocol AuthoViewDelegate: AnyObject {
-//    func toComeIn(with model: AuthoModel)
-//}
+protocol AuthoViewDelegate: AnyObject {
+    func toComeIn(with model: AuthoModel)
+}
 
 class AuthoView: BaseView {
     
