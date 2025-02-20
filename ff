@@ -1,13 +1,33 @@
-// 1
-// 1
-// 1
-// 1
-// 1
-// 1
-// 1
-// 1
-// 1
-// 1
-// 1
-// 1
-// 1
+import SwiftUI
+
+struct ContentView: View {
+    @State private var count = 0
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("Счетчик: \(count)")
+                .font(.largeTitle)
+                .padding()
+            
+            Button(action: {
+                count += 1
+            }) {
+                Text("Увеличить")
+                    .font(.title)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+        }
+    }
+}
+
+@main
+struct CounterApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
